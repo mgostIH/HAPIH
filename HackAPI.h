@@ -23,6 +23,7 @@ private:
 	DWORD LAST_ERROR;
 public:
 	~HackIH();
+	HackIH();
 	HackIH(DWORD Pid) : PROCESS_ID(Pid) {}
 	HackIH(DWORD Pid, std::string ProcName) : PROCESS_ID(Pid), PROC_NAME(ProcName) {}
 	HackIH(DWORD Pid, std::string ProcName, std::string WindowName) : PROCESS_ID(Pid), PROC_NAME(ProcName),WINDOW_NAME(WindowName) {}
@@ -54,8 +55,8 @@ private:
 	DWORD OFFSETS[16] = {};
 	BYTE OFFS_AMOUNT = 0;
 public:
-	DWORD BASE_ADDR;
-
+	DWORD BASE_ADDR=0;
+	PointerIH();
 	PointerIH(PVOID BaseAddr) : BASE_ADDR((DWORD)BaseAddr){}
 	PointerIH(DWORD BaseAddr) : BASE_ADDR(BaseAddr){}
 	PointerIH(PVOID BaseAddr, DWORD* Offsets,BYTE Amount);
