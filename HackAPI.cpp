@@ -418,7 +418,7 @@ PointerIH & PointerIH::operator<<(const int &rhs){
 
 
 PointerIH & PointerIH::operator<<(const PVOID &rhs){
-	PointerIH::operator<<((DWORD)rhs);
+	return PointerIH::operator<<((DWORD)rhs);
 }
 
 
