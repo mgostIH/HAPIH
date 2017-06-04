@@ -1,0 +1,4 @@
+include 'iosstream'
+include 'windows.h'
+
+imgay
